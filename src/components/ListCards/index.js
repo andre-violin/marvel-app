@@ -1,26 +1,28 @@
 import React from "react";
+
+import Card from "../Card";
 import { Container } from "./styles";
 
+import characters from "../../data";
+
 export default function ListCard() {
+  const { results } = characters.data;
+
   return (
     <Container>
-      <li>
-        <div>
-          <img
-            src="http://i.annihil.us/u/prod/marvel/i/mg/9/50/4ce18691cbf04.jpg"
-            alt="Abomination (Emil Blonsky)"
-          />
-        </div>
-        <div>
-          <h2>Abomination (Emil Blonsky)</h2>
-          <p>
-            Formerly known as Emil Blonsky, a spy of Soviet Yugoslavian origin
-            working for the KGB, the Abomination gained his powers after
-            receiving a dose of gamma radiation similar to that which
-            transformed Bruce Banner into the incredible Hulk.
-          </p>
-        </div>
-      </li>
+      {results.map(character => (
+        <Card
+          imgCharacter={`${character.thumbnail.path}.${
+            character.thumbnail.extension
+          }`}
+          nameCharacter={character.name}
+          description={
+            character.description
+              ? character.description
+              : "Não foi definida uma descrição!"
+          }
+        />
+      ))}
     </Container>
   );
 }

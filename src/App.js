@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import ListCards from './components/ListCards'
+import GlobalStyles from "./styles/global";
+import ListCards from "./components/ListCards";
 
 function App() {
   return (
     <>
       <ListCards />
+      <GlobalStyles />
     </>
   );
 }
