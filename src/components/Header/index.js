@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Container } from "./styles";
 
@@ -8,7 +9,9 @@ export default function Header() {
       <h1>MarvelApp</h1>
       <nav>
         <ul>
-          <li>link 1</li>
+          <li>
+            <Link to="/">home</Link>
+          </li>
           <li>link 2</li>
           <li>link 3</li>
         </ul>

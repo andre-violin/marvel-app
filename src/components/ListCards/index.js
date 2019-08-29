@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../Card";
 import { Container } from "./styles";
@@ -11,17 +12,17 @@ export default function ListCard() {
   return (
     <Container>
       {results.map(character => (
-        <Card
-          imgCharacter={`${character.thumbnail.path}.${
-            character.thumbnail.extension
-          }`}
-          nameCharacter={character.name}
-          description={
-            character.description
-              ? character.description
-              : "Não foi definida uma descrição!"
-          }
-        />
+        <Link key={character.id} to={`/details/${character.id}`}>
+          <Card
+            imgCharacter={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+            nameCharacter={character.name}
+            description={
+              character.description
+                ? character.description
+                : "Não foi definida uma descrição!"
+            }
+          />
+        </Link>
       ))}
     </Container>
   );

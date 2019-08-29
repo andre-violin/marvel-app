@@ -22,6 +22,11 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .main-container {
     margin-top: 100px;
   }

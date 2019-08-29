@@ -11,7 +11,7 @@ export default function Routes() {
       <Header />
       <div className="main-container">
         <Route exact path="/" component={Main} />
-        <Route path="/details" component={Details} />
+        <Route path="/details/:id" component={Details} />
       </div>
     </BrowserRouter>
   );
