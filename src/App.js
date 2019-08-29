@@ -1,12 +1,12 @@
 import React from "react";
 
 import GlobalStyles from "./styles/global";
-import ListCards from "./components/ListCards";
+import Routes from "./routes";
 
 function App() {
   return (
     <>
-      <ListCards />
+      <Routes />
       <GlobalStyles />
     </>
   );

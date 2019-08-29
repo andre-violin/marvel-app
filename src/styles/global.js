@@ -22,4 +22,8 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+  .main-container {
+    margin-top: 100px;
+  }
+
 `;
